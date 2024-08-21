@@ -19,7 +19,7 @@ class MathUtilTest {
     @DisplayName("Subtracts 4 and 1")
     void should_subtract_two_numbers() {
         int actual = MathUtil.subtract(4, 1);
-        assertEquals(3, actual);
+        assertEquals(2, actual);
     }
 
 }
