@@ -2,9 +2,14 @@ pipeline {
     agent any
 
     stages {
+        stage('Checkout') {
+            script {
+                git branch: 'main',
+                    url: 'https://github.com/shirishpandharikar/allure-demo.git'
+            }
+        }
         stage('Build') {
             steps {
-                git 'https://github.com/shirishpandharikar/allure-demo.git'
                 sh 'mvn clean verify'
             }
             post {
